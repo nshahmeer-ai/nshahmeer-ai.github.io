@@ -546,6 +546,10 @@ ul.unstyled {
         display: flex;
     }
     
+    #tabbedLayoutContainer {
+        margin-top: 0;
+    }
+
     .nav-tabs {
         flex-direction: column;
         display: none;
