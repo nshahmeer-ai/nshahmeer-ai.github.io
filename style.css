@@ -476,18 +476,22 @@ ul.unstyled {
 }
 
 .links .external-link a::before {
-    content: "\f08e"; /* FontAwesome external link icon */
+    content: "\f0c1"; /* FontAwesome link icon */
     font-family: "FontAwesome";
     color: var(--white);
-    background-color: #e5993b; /* Orange/Yellow icon bg */
+    background-color: #e8a810; /* Stanford Gold icon bg */
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    margin-right: 8px;
+    font-size: 13px;
+    margin-right: 12px;
+}
+
+.links .external-link a.cv::before {
+    content: "\f019"; /* FontAwesome download icon */
 }
 
 .mobile-tab-toggle {
