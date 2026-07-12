@@ -595,6 +595,10 @@ ul.unstyled {
         display: flex;
     }
     
+    .nav-tabs li {
+        text-align: left;
+    }
+
     .nav-tabs li a {
         border-radius: 0;
         border-bottom: 1px solid var(--gray-border);
