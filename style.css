@@ -456,14 +456,32 @@ ul.unstyled {
 }
 
 .contact-info .email {
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
     word-break: break-all;
+    color: #00508f; /* Stanford blue */
+    font-size: 15px;
+}
+
+.contact-info .email i {
+    font-size: 18px;
+    color: #00508f;
+    margin-right: 12px !important;
 }
 
 .phone, .address {
-    color: var(--gray-text);
-    margin-bottom: 5px;
+    color: #4d4d4f;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.phone i, .address i {
+    font-size: 18px;
+    color: #4d4d4f;
+    margin-right: 12px !important;
 }
 
 .links .external-link {
