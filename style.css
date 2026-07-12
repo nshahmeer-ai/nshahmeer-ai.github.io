@@ -473,6 +473,13 @@ ul.unstyled {
     .span8, .span4 {
         width: 100%;
         padding-right: 0;
+        float: none;
+        display: block;
+    }
+    
+    .row-fluid {
+        display: flex;
+        flex-direction: column;
     }
     
     .nav-tabs {
