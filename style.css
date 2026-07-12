@@ -717,8 +717,14 @@ ul.unstyled {
     }
     .item-subtitle {
         font-size: 0.85em;
+        display: block;
+    }
+    .item-subtitle::after {
+        display: none;
     }
     .item-date {
         font-size: 0.8em;
+        display: block;
+        margin-top: 2px;
     }
 }
