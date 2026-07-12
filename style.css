@@ -390,6 +390,10 @@ ul.unstyled {
     color: #4d4d4f;
 }
 
+.description.bulleted {
+    padding-left: 1em;
+}
+
 .description.bulleted::before {
     content: "\2022";
     color: var(--stanford-red);
@@ -399,14 +403,13 @@ ul.unstyled {
     margin-left: -1em;
 }
 
-.section-list-item {
-    padding-left: 1em;
-}
+/* .section-list-item padding-left was causing misalignment for non-bulleted items */
 
 .bulleted-sublist {
     list-style-type: disc;
     margin-top: 5px;
-    margin-left: 20px;
+    margin-left: 0;
+    padding-left: 20px;
     color: #4d4d4f;
 }
 
