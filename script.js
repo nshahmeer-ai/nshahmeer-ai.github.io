@@ -1,22 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
+    // Select all tab links and tab panes
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons and contents
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
+    tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
 
-            // Add active class to clicked button
-            btn.classList.add('active');
+            // Remove active class from all tabs
+            document.querySelectorAll('.nav-tabs li').forEach(li => li.classList.remove('active'));
+            
+            // Remove active class from all panes
+            tabPanes.forEach(pane => pane.classList.remove('active'));
 
-            // Show corresponding content
-            const targetId = btn.getAttribute('data-target');
-            const targetContent = document.getElementById(targetId);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
+            // Add active class to clicked tab's parent li
+            link.parentElement.classList.add('active');
+
+            // Show target pane
+            const targetId = link.getAttribute('href').substring(1);
+            document.getElementById(targetId).classList.add('active');
         });
     });
 });

@@ -1,181 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Shahmeer Nawaz's Profile | Stanford Profiles Replica</title>
+    <meta name="description" content="Shahmeer Nawaz Portfolio Replica">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shahmeer Nawaz - Personal Portfolio">
-    <title>Shahmeer Nawaz | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-main">Shahmeer</span>
-                <span class="logo-sub">Portfolio</span>
-            </div>
-        </div>
-    </header>
-
-    <main class="container main-content">
-        <section class="masthead">
-            <div class="profile-image">
-                <img src="shahmeer pic.jpg" alt="Shahmeer Nawaz Profile Picture">
-            </div>
-            <div class="profile-info">
-                <h1>Shahmeer Nawaz</h1>
-                <h2>MSc in Artificial Intelligence Graduate, AI Developer, and Graduate Assistant</h2>
-                <h3 class="department">Artificial Intelligence</h3>
-                <div class="actions">
-                    <button class="btn-action" onclick="window.print()"><i class="fas fa-print"></i> Print Resume</button>
-                    <a href="mailto:shahmeernawazai@gmail.com" class="btn-action"><i class="fas fa-envelope"></i> Email Me</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="content-wrapper">
-            <div class="main-column">
-                <div class="tabs">
-                    <button class="tab-btn active" data-target="bio">Professional Summary</button>
-                    <button class="tab-btn" data-target="experience">Experience</button>
-                    <button class="tab-btn" data-target="education">Education</button>
-                    <button class="tab-btn" data-target="projects">Projects & Skills</button>
-                </div>
-
-                <div class="tab-content active" id="bio">
-                    <div class="section">
-                        <h3>Professional Summary</h3>
-                        <div class="divider"></div>
-                        <p>MSc in Artificial Intelligence graduate with a strong academic background and experience in teaching, mentoring, and applied AI research. Served as a Graduate Assistant in Object-Oriented Programming, supporting undergraduate instruction, conducting laboratory sessions, and supervising student projects.</p>
-                        <p>Skilled in Reinforcement Learning, Computer Vision, Natural Language Processing, and Generative AI with hands-on experience developing machine learning solutions. Passionate about academic excellence, student mentorship, and research-driven innovation.</p>
-                    </div>
-
-                    <div class="section">
-                        <h3>Achievements</h3>
-                        <div class="divider"></div>
-                        <ul class="bullet-list">
-                            <li>Generative AI Hackathon Winner (2025)</li>
-                            <li>Graduate Assistant, UET Lahore</li>
-                            <li>Mentored undergraduate AI students</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="experience">
-                    <div class="section">
-                        <h3>Professional Experience</h3>
-                        <div class="divider"></div>
-                        <div class="experience-item" style="margin-bottom: 24px;">
-                            <h4 style="font-size: 1.1rem; color: #222; margin-bottom: 4px;">AI Developer Intern</h4>
-                            <div style="font-style: italic; color: var(--primary-color); margin-bottom: 8px;">AIGETAI Pvt Ltd | May 2025–Jul 2025</div>
-                            <ul class="bullet-list">
-                                <li>Developed Machine Learning and Deep Learning applications.</li>
-                                <li>Built Computer Vision and NLP systems.</li>
-                                <li>Developed APIs using Flask and FastAPI.</li>
-                                <li>Applied MLOps practices.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item" style="margin-bottom: 24px;">
-                            <h4 style="font-size: 1.1rem; color: #222; margin-bottom: 4px;">Electrical Consultant</h4>
-                            <div style="font-style: italic; color: var(--primary-color); margin-bottom: 8px;">Raahim Associates | Feb 2025–May 2025</div>
-                            <ul class="bullet-list">
-                                <li>Worked on switchgear systems.</li>
-                                <li>Supported industrial fault detection research.</li>
-                                <li>Applied AI concepts in electrical engineering.</li>
-                            </ul>
+<body class="profile">
+    <div class="wrapper">
+        <header id="header">
+            <div class="container navbar">
+                <div class="column-logo brand">
+                    <div class="logo">
+                        <div class="stanford-logo">
+                            <a href="#">
+                                <span>Stanford</span>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="section">
-                        <h3>Teaching & Academic Experience</h3>
-                        <div class="divider"></div>
-                        <div class="experience-item" style="margin-bottom: 24px;">
-                            <h4 style="font-size: 1.1rem; color: #222; margin-bottom: 4px;">Graduate Assistant</h4>
-                            <div style="font-style: italic; color: var(--primary-color); margin-bottom: 8px;">Computer Engineering Department, UET Lahore | Mar 2026–Present</div>
-                            <ul class="bullet-list">
-                                <li>Assisted in teaching Object-Oriented Programming (OOP).</li>
-                                <li>Conducted laboratory sessions.</li>
-                                <li>Mentored undergraduate AI projects.</li>
-                                <li>Evaluated assignments and projects.</li>
-                            </ul>
+                    <div class="signature">
+                        <div class="site-name">
+                            <a href="#">
+                                <span class="site-name-1">Profiles</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="tab-content" id="education">
-                    <div class="section">
-                        <h3>Education</h3>
-                        <div class="divider"></div>
-                        <ul class="course-list">
-                            <li>
-                                <a href="#">University of Engineering and Technology (UET), Lahore</a>
-                                <span>MSc Artificial Intelligence (2025–2026)</span>
-                            </li>
-                            <li style="margin-top: 16px;">
-                                <a href="#">MNS University of Engineering and Technology, Multan</a>
-                                <span>BSc Electrical Engineering (2020–2024)</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="projects">
-                    <div class="section">
-                        <h3>Selected Projects</h3>
-                        <div class="divider"></div>
-                        <ul class="bullet-list">
-                            <li>Real-Time Object Detection & Segmentation (YOLOv8 + SAM)</li>
-                            <li>AI Resume Builder & Analyzer</li>
-                            <li>E-Commerce Platform with AI Chatbot</li>
-                            <li>Transformer-Based Image Captioning</li>
-                            <li>AI PDF Tools Suite</li>
-                        </ul>
-                    </div>
-
-                    <div class="section">
-                        <h3>Technical Skills</h3>
-                        <div class="divider"></div>
-                        <ul class="bullet-list">
-                            <li><strong>Programming Languages:</strong> Python, Java, C++</li>
-                            <li><strong>ML/DL Libraries:</strong> PyTorch, TensorFlow, Keras, Scikit-learn</li>
-                            <li><strong>Computer Vision:</strong> OpenCV, YOLOv8, Segment Anything Model (SAM)</li>
-                            <li><strong>NLP:</strong> Hugging Face Transformers, spaCy, NLTK</li>
-                            <li><strong>Deployment:</strong> Flask, FastAPI, Streamlit, Docker, AWS (EC2, S3), REST APIs</li>
-                            <li><strong>Developer Tools:</strong> Git, GitHub, CI/CD, Linux, MLOps</li>
-                            <li><strong>AI Domains:</strong> Computer Vision, Reinforcement Learning, Deep Learning, Natural Language Processing, Generative AI</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-            
-            <aside class="sidebar">
-                <div class="section card">
-                    <h3>Contact Info</h3>
-                    <div class="divider"></div>
-                    <div class="contact-card">
-                        <span class="name">Shahmeer Nawaz</span>
-                        <a href="mailto:shahmeernawazai@gmail.com" class="email"><i class="fas fa-envelope"></i> shahmeernawazai@gmail.com</a>
-                        <span class="phone"><i class="fas fa-phone"></i> +92 3136007845</span>
-                        <span class="location" style="margin-top: 4px; font-size: 0.95rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary-color); width: 20px;"></i> Lahore, Pakistan</span>
+        </header>
+        <main id="bodyContent">
+            <div id="mainContent">
+                <section id="mastheadContainer" class="banner profile">
+                    <div class="container">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="image-holder">
+                                    <img src="shahmeer pic.jpg" alt="Shahmeer Nawaz">
+                                </div>
+                                <div class="nameAndTitle">
+                                    <h1>Shahmeer Nawaz</h1>
+                                    <h2>MSc in Artificial Intelligence Graduate, AI Developer, and Graduate Assistant<br/></h2>
+                                    <h3>Artificial Intelligence</h3>
+                                </div>
+                                <ul class="unstyled right-actions">
+                                    <li>
+                                        <a href="javascript:window.print()">
+                                            <div class="icon-background"><i class="icon-print"></i></div>
+                                            Print Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:shahmeernawazai@gmail.com">
+                                            <div class="icon-background"><i class="icon-envelope-alt"></i></div>
+                                            Email Profile
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="section card">
-                    <h3>Links</h3>
-                    <div class="divider"></div>
-                    <ul class="links-list">
-                        <li><a href="https://linkedin.com/in/shahmeer-nawazai" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://github.com/shahmeer-ai" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
-    </main>
+                </section>
+                <section id="tabbedLayoutContainer">
+                    <div class="container breakout-phone">
+                        <div class="nav-collapse collapse">
+                            <ul class="nav nav-tabs tabs4">
+                                <li class="active">
+                                    <a id="bioTabLink" href="#bio" class="tab-link no-trigger" data-toggle="tab">Professional Summary</a>
+                                </li>
+                                <li class="">
+                                    <a id="experienceTabLink" href="#experience" class="tab-link no-trigger" data-toggle="tab">Experience</a>
+                                </li>
+                                <li class="">
+                                    <a id="educationTabLink" href="#education" class="tab-link no-trigger" data-toggle="tab">Education</a>
+                                </li>
+                                <li class="">
+                                    <a id="projectsTabLink" href="#projects" class="tab-link no-trigger" data-toggle="tab">Projects & Skills</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container breakout-phone">
+                        <div class="tab-content">
+                            <div id="bio" class="card tab-pane active">
+                                <div class="row-fluid">
+                                    <div class="span8">
+                                        <div id="bioContent" class="content-section">
+                                            <h3>Professional Summary</h3>
+                                            <hr/>
+                                            <p>MSc in Artificial Intelligence graduate with a strong academic background and experience in teaching, mentoring, and applied AI research. Served as a Graduate Assistant in Object-Oriented Programming, supporting undergraduate instruction, conducting laboratory sessions, and supervising student projects.</p>
+                                            <p>Skilled in Reinforcement Learning, Computer Vision, Natural Language Processing, and Generative AI with hands-on experience developing machine learning solutions. Passionate about academic excellence, student mentorship, and research-driven innovation.</p>
+                                        </div>
+                                        <div id="honorsAndAwardsContent" class="content-section">
+                                            <h3>Achievements</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item"><div class="description bulleted">Generative AI Hackathon Winner (2025)</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">Graduate Assistant, UET Lahore</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">Mentored undergraduate AI students</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="span4 side-bar">
+                                        <div id="contactInfoContent" class="content-section contact-info">
+                                            <h3>Contact</h3>
+                                            <hr/>
+                                            <ul class="unstyled section-listing use-link-icons">
+                                                <li class="alternate">
+                                                    <div class="contact-info">
+                                                        <span class="name">Shahmeer Nawaz</span>
+                                                        <a href="mailto:shahmeernawazai@gmail.com" class="email">shahmeernawazai@gmail.com</a>
+                                                        <ul class="unstyled">
+                                                            <li class="no-margin"><div class="phone"> +92 3136007845 </div></li>
+                                                            <li class="no-margin"><div class="phone"> Lahore, Pakistan </div></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="linksContent" class="content-section links">
+                                            <h3>Links</h3>
+                                            <hr/>
+                                            <ul class="unstyled section-listing use-link-icons">
+                                                <li class="external-link"><a href="https://linkedin.com/in/shahmeer-nawazai" target="_blank" class="cv">LinkedIn Profile</a></li>
+                                                <li class="external-link"><a href="https://github.com/shahmeer-ai" target="_blank" class="Lab Site">GitHub Profile</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="experience" class="card tab-pane">
+                                <div class="row-fluid">
+                                    <div class="span8">
+                                        <div class="content-section">
+                                            <h3>Professional Experience</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item">
+                                                    <div class="description"><strong>AI Developer Intern</strong>, AIGETAI Pvt Ltd (May 2025–Jul 2025)</div>
+                                                    <ul class="bulleted-sublist">
+                                                        <li>Developed Machine Learning and Deep Learning applications.</li>
+                                                        <li>Built Computer Vision and NLP systems.</li>
+                                                        <li>Developed APIs using Flask and FastAPI.</li>
+                                                        <li>Applied MLOps practices.</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="section-list-item">
+                                                    <div class="description"><strong>Electrical Consultant</strong>, Raahim Associates (Feb 2025–May 2025)</div>
+                                                    <ul class="bulleted-sublist">
+                                                        <li>Worked on switchgear systems.</li>
+                                                        <li>Supported industrial fault detection research.</li>
+                                                        <li>Applied AI concepts in electrical engineering.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-section">
+                                            <h3>Teaching & Academic Experience</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item">
+                                                    <div class="description"><strong>Graduate Assistant</strong>, Computer Engineering Department, UET Lahore (Mar 2026–Present)</div>
+                                                    <ul class="bulleted-sublist">
+                                                        <li>Assisted in teaching Object-Oriented Programming (OOP).</li>
+                                                        <li>Conducted laboratory sessions.</li>
+                                                        <li>Mentored undergraduate AI projects.</li>
+                                                        <li>Evaluated assignments and projects.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div id="education" class="card tab-pane">
+                                <div class="row-fluid">
+                                    <div class="span8">
+                                        <div class="content-section">
+                                            <h3>Education</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item">
+                                                    <div class="description"><strong>MSc Artificial Intelligence</strong>, University of Engineering and Technology (UET), Lahore (2025–2026)</div>
+                                                </li>
+                                                <li class="section-list-item">
+                                                    <div class="description"><strong>BSc Electrical Engineering</strong>, MNS University of Engineering and Technology, Multan (2020–2024)</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="projects" class="card tab-pane">
+                                <div class="row-fluid">
+                                    <div class="span8">
+                                        <div class="content-section">
+                                            <h3>Selected Projects</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item"><div class="description bulleted">Real-Time Object Detection & Segmentation (YOLOv8 + SAM)</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">AI Resume Builder & Analyzer</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">E-Commerce Platform with AI Chatbot</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">Transformer-Based Image Captioning</div></li>
+                                                <li class="section-list-item"><div class="description bulleted">AI PDF Tools Suite</div></li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-section">
+                                            <h3>Technical Skills</h3>
+                                            <hr/>
+                                            <ul class="section-listing">
+                                                <li class="section-list-item"><div class="description"><strong>Programming Languages:</strong> Python, Java, C++</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>ML/DL Libraries:</strong> PyTorch, TensorFlow, Keras, Scikit-learn</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>Computer Vision:</strong> OpenCV, YOLOv8, Segment Anything Model (SAM)</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>NLP:</strong> Hugging Face Transformers, spaCy, NLTK</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>Deployment:</strong> Flask, FastAPI, Streamlit, Docker, AWS (EC2, S3), REST APIs</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>Developer Tools:</strong> Git, GitHub, CI/CD, Linux, MLOps</div></li>
+                                                <li class="section-list-item"><div class="description"><strong>AI Domains:</strong> Computer Vision, Reinforcement Learning, Deep Learning, Natural Language Processing, Generative AI</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

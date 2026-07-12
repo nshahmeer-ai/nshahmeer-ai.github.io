@@ -1,397 +1,388 @@
-/* Modern Reset and CSS Variables */
+/* Exact Stanford Profile Theme Replication */
 :root {
-    --primary-color: #8C1515; /* Stanford Red */
-    --primary-hover: #b11a1a;
-    --text-main: #2e2d29;
-    --text-muted: #544f47;
-    --bg-body: #f4f4f4;
-    --bg-card: #ffffff;
-    --border-color: #e5e5e5;
-    --accent-blue: #006cb8;
-    --font-family: 'Inter', sans-serif;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --stanford-red: #8C1515;
+    --stanford-dark-red: #820000;
+    --gray-bg: #f3f4f5;
+    --gray-border: #e1e3e4;
+    --gray-text: #4d4f53;
+    --dark-text: #2e2d29;
+    --link-color: #00508c;
+    --white: #ffffff;
 }
 
 body {
-    font-family: var(--font-family);
-    color: var(--text-main);
-    background-color: var(--bg-body);
-    line-height: 1.6;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--dark-text);
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
 }
 
 a {
-    color: var(--accent-blue);
+    color: var(--link-color);
     text-decoration: none;
-    transition: var(--transition);
 }
 
 a:hover {
     text-decoration: underline;
-    color: #00508a;
+    color: var(--stanford-red);
 }
 
-/* Layout */
+ul.unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 970px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 15px;
+}
+
+.row-fluid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.span12 {
+    width: 100%;
+}
+
+.span8 {
+    width: 66.6666%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.span4 {
+    width: 33.3333%;
+    box-sizing: border-box;
 }
 
 /* Header */
-.header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#header {
+    background-color: var(--stanford-red);
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+.column-logo.brand {
+    display: flex;
+    align-items: center;
+    color: var(--white);
 }
 
-.logo-main {
-    margin-right: 4px;
+.stanford-logo a {
+    color: var(--white);
+    font-family: "Source Serif Pro", Georgia, Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
-.logo-sub {
+.site-name-1 {
+    color: var(--white);
+    font-size: 20px;
     font-weight: 300;
-    opacity: 0.9;
 }
 
-/* Main Content Area */
-.main-content {
-    margin-top: 40px;
-    margin-bottom: 60px;
+.site-name a {
+    text-decoration: none;
 }
 
 /* Masthead */
-.masthead {
+.banner.profile {
+    background-color: var(--gray-bg);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.banner.profile .row-fluid .span12 {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-    background: var(--bg-card);
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 32px;
-    animation: fadeIn 0.5s ease-out;
+    position: relative;
 }
 
-@media (min-width: 768px) {
-    .masthead {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+.image-holder {
+    width: 200px;
+    margin-right: 40px;
+    flex-shrink: 0;
 }
 
-.profile-image img {
+.image-holder img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 3px solid var(--white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.profile-info h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #222;
+.nameAndTitle {
+    flex-grow: 1;
 }
 
-.profile-info h2 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    line-height: 1.5;
-}
-
-.profile-info h3.department {
-    font-size: 1rem;
+.nameAndTitle h1 {
+    font-size: 40px;
     font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 24px;
+    margin: 0 0 10px 0;
+    color: #2e2d29;
+    letter-spacing: -0.5px;
 }
 
-.actions {
-    display: flex;
-    gap: 12px;
+.nameAndTitle h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+    line-height: 1.4;
+    color: #2e2d29;
 }
 
-.btn-action {
-    background-color: #f8f9fa;
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
+.nameAndTitle h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--stanford-red);
+    margin: 10px 0 0 0;
+}
+
+/* Actions */
+.right-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+}
+
+.right-actions li {
+    margin-bottom: 10px;
+}
+
+.right-actions a {
     display: flex;
     align-items: center;
-    gap: 8px;
+    color: var(--link-color);
+    font-size: 14px;
 }
 
-.btn-action:hover {
-    background-color: #e2e6ea;
-    transform: translateY(-2px);
-}
-
-/* Content Layout */
-.content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-}
-
-@media (min-width: 992px) {
-    .content-wrapper {
-        grid-template-columns: 2.5fr 1fr;
-    }
-}
-
-/* Tabs */
-.tabs {
+.right-actions .icon-background {
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     display: flex;
-    border-bottom: 2px solid var(--border-color);
-    margin-bottom: 24px;
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    color: var(--stanford-red);
+    transition: all 0.2s;
 }
 
-.tabs::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+.right-actions a:hover .icon-background {
+    background-color: var(--stanford-red);
+    color: var(--white);
 }
 
-.tab-btn {
-    background: none;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    cursor: pointer;
-    position: relative;
-    transition: var(--transition);
-    white-space: nowrap;
+/* Tabs Layout */
+#tabbedLayoutContainer {
+    margin-top: 30px;
 }
 
-.tab-btn:hover {
-    color: var(--primary-color);
+.nav-tabs {
+    border-bottom: 1px solid var(--gray-border);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.tab-btn.active {
-    color: var(--primary-color);
+.nav-tabs li {
+    margin-bottom: -1px;
 }
 
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: var(--primary-color);
-    border-radius: 3px 3px 0 0;
+.nav-tabs li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-text);
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background-color: #fafafa;
+    border-color: var(--gray-border) var(--gray-border) transparent;
+    margin-right: 5px;
 }
 
-/* Tab Content */
+.nav-tabs li a:hover {
+    background-color: var(--gray-bg);
+    text-decoration: none;
+}
+
+.nav-tabs li.active a {
+    color: var(--dark-text);
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    border-bottom-color: transparent;
+    border-top: 3px solid var(--stanford-red);
+}
+
 .tab-content {
-    display: none;
-    background: var(--bg-card);
-    padding: 32px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    animation: fadeIn 0.4s ease;
+    margin-top: 20px;
+    padding-bottom: 50px;
 }
 
-.tab-content.active {
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
     display: block;
 }
 
-.section {
+/* Content Sections */
+.content-section {
     margin-bottom: 40px;
 }
 
-.section:last-child {
-    margin-bottom: 0;
+.content-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin: 0 0 10px 0;
 }
 
-.section h3 {
-    font-size: 1.25rem;
-    color: #222;
-    margin-bottom: 12px;
+.content-section hr {
+    border: 0;
+    border-top: 1px solid var(--gray-border);
+    margin-bottom: 15px;
 }
 
-.divider {
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
-    margin-bottom: 20px;
-    width: 60px;
-}
-
-.section p {
-    margin-bottom: 16px;
-    color: var(--text-muted);
+.content-section p {
+    margin-bottom: 15px;
+    color: var(--gray-text);
 }
 
 /* Lists */
-.bullet-list {
-    list-style-type: none;
+.section-listing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.bullet-list li {
-    position: relative;
-    padding-left: 20px;
+.section-list-item {
+    padding-bottom: 12px;
     margin-bottom: 12px;
-    color: var(--text-muted);
+    border-bottom: 1px dotted var(--gray-border);
 }
 
-.bullet-list li::before {
-    content: '•';
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.course-list {
-    list-style: none;
-}
-
-.course-list li {
-    margin-bottom: 16px;
-}
-
-.course-list a {
-    display: block;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.course-list span {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Publications */
-.publication-list {
-    list-style: none;
-}
-
-.publication-list li {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.publication-list li:last-child {
+.section-list-item:last-child {
     border-bottom: none;
 }
 
-.pub-title {
-    display: block;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 4px;
+.description {
+    color: var(--dark-text);
 }
 
-.pub-journal {
-    font-style: italic;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 8px;
+.description.bulleted::before {
+    content: "\2022";
+    color: var(--stanford-red);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
-.pub-authors {
-    display: block;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 4px;
+.section-list-item {
+    padding-left: 1em;
 }
 
-.pub-details {
-    font-size: 0.85rem;
-    color: #888;
+.bulleted-sublist {
+    list-style-type: disc;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: var(--gray-text);
+}
+
+.bulleted-sublist li {
+    margin-bottom: 5px;
 }
 
 /* Sidebar */
-.sidebar .card {
-    background: var(--bg-card);
-    padding: 24px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 24px;
+.side-bar {
+    background-color: var(--white);
 }
 
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.contact-card strong {
-    color: var(--primary-color);
-    margin-bottom: 4px;
-}
-
-.contact-card .name {
+.contact-info .name {
+    display: block;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
-.contact-card .title, .contact-card .phone {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+.contact-info .email {
+    display: block;
+    margin-bottom: 10px;
+    word-break: break-all;
 }
 
-.contact-card .email {
-    font-size: 0.95rem;
-    margin: 4px 0;
+.phone, .address {
+    color: var(--gray-text);
+    margin-bottom: 5px;
 }
 
-.links-list {
-    list-style: none;
+.links .external-link {
+    margin-bottom: 10px;
 }
 
-.links-list li {
-    margin-bottom: 12px;
-}
-
-.links-list a {
+.links .external-link a {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 500;
 }
 
-.links-list i {
-    color: var(--primary-color);
-    width: 20px;
-    text-align: center;
+.links .external-link a::before {
+    content: "\f08e"; /* FontAwesome external link icon */
+    font-family: "FontAwesome";
+    color: var(--stanford-red);
+    margin-right: 8px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+/* Responsive */
+@media (max-width: 767px) {
+    .banner.profile .row-fluid .span12 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .image-holder {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .right-actions {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .right-actions li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .span8, .span4 {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+    }
+    
+    .nav-tabs li a {
+        border-radius: 0;
+        border-bottom: 1px solid var(--gray-border);
     }
 }
