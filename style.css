@@ -612,6 +612,25 @@ ul.unstyled {
     .nameAndTitle h1 {
         font-size: 24px;
     }
+
+    .tab-content {
+        padding: 20px 15px;
+    }
+
+    .content-section {
+        margin-bottom: 25px;
+    }
+
+    .content-section h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .content-section p {
+        font-size: 15px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
 }  
  
 }
