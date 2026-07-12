@@ -152,8 +152,8 @@ ul.unstyled {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(to bottom, rgba(120, 90, 40, 0.7), rgba(60, 40, 20, 0.85));
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     z-index: 1;
 }
 
@@ -457,7 +457,7 @@ ul.unstyled {
 @media (max-width: 767px) {
     .masthead-content-row {
         display: grid;
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 140px 1fr;
         grid-template-areas: 
             "img h1"
             "img h2"
@@ -470,13 +470,13 @@ ul.unstyled {
     
     .image-holder {
         grid-area: img;
-        width: 120px;
+        width: 140px;
         margin: 0;
     }
 
     .image-holder img {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
     
     .nameAndTitle, .name-actions-row {
@@ -486,18 +486,24 @@ ul.unstyled {
     .name-actions-row h1 {
         grid-area: h1;
         margin-top: 0;
+        font-size: 20px !important;
     }
     
     .nameAndTitle h2 {
         grid-area: h2;
+        font-size: 11px !important;
+        margin-bottom: 8px !important;
     }
     
     .nameAndTitle h3 {
         grid-area: h3;
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
     }
     
     .nameAndTitle h4 {
         grid-area: h4;
+        font-size: 11px !important;
     }
 
     .right-actions {
