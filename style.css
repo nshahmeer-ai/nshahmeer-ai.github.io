@@ -685,19 +685,28 @@ ul.unstyled {
     font-size: 1.1em;
     font-weight: 600;
     color: #333;
-    display: block;
-    margin-bottom: 2px;
+    display: inline;
+}
+
+.item-title::after {
+    content: "\A";
+    white-space: pre;
 }
 
 .item-subtitle {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #666;
-    display: block;
+    display: inline;
 }
 
 .item-date {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #999;
-    display: block;
-    margin-top: 2px;
+    display: inline;
+}
+
+.item-date::before {
+    content: " | ";
+    color: #ccc;
+    margin: 0 4px;
 }
