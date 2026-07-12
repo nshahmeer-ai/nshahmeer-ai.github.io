@@ -255,51 +255,66 @@ ul.unstyled {
 /* Tabs Layout */
 #tabbedLayoutContainer {
     max-width: 970px;
-    margin: 30px auto 50px auto;
+    margin: 40px auto 50px auto;
+    background-color: var(--white);
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .nav-tabs {
     list-style: none;
-    padding: 0 15px;
+    padding: 0;
     margin: 0;
     display: flex;
-    background-color: #f1f0ea; /* Match outer bg so tabs look attached to bottom */
+    background-color: #edebe4; /* Beige background for the tab bar */
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .nav-tabs li {
-    margin-bottom: -1px;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #dcdcdc;
+    margin: 0;
+}
+
+.nav-tabs li:last-child {
+    border-right: none;
 }
 
 .nav-tabs li a {
     display: block;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--gray-text);
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    background-color: #fafafa;
-    border-color: var(--gray-border) var(--gray-border) transparent;
-    margin-right: 5px;
+    padding: 15px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    margin: 0;
 }
 
 .nav-tabs li a:hover {
-    background-color: var(--gray-bg);
+    background-color: #e5e3db;
     text-decoration: none;
+}
+
+.nav-tabs li.active {
+    background-color: var(--white);
+    position: relative;
+    top: 1px; /* Cover the bottom border */
 }
 
 .nav-tabs li.active a {
     color: var(--dark-text);
-    background-color: var(--white);
-    border: 1px solid var(--gray-border);
-    border-bottom-color: transparent;
+    background-color: transparent;
     border-top: 3px solid var(--stanford-red);
+    padding-top: 12px; /* Compensate for the 3px top border */
 }
 
 .tab-content {
-    background-color: var(--white);
-    padding: 30px 40px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: transparent;
+    padding: 40px;
+    box-shadow: none;
     min-height: 400px;
 }
 
