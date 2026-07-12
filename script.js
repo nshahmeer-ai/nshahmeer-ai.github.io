@@ -74,10 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Filter sections based on visible items
+            // Filter sections based on visible items or heading match
             sections.forEach(sec => {
+                const heading = sec.querySelector('h3');
+                const headingMatches = heading && heading.textContent.toLowerCase().includes(query);
+                
                 const items = Array.from(sec.querySelectorAll('.section-list-item, p'));
-                if (items.length > 0) {
+                
+                if (headingMatches) {
+                    // If the heading matches, show the section and all its items!
+                    sec.style.display = '';
+                    items.forEach(item => item.style.display = '');
+                } else if (items.length > 0) {
                     const hasVisible = items.some(item => item.style.display !== 'none');
                     sec.style.display = hasVisible ? '' : 'none';
                 } else {
