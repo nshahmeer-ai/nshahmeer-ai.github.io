@@ -460,13 +460,13 @@ ul.unstyled {
     align-items: center;
     margin-bottom: 15px;
     word-break: break-all;
-    color: #00508f; /* Stanford blue */
+    color: #005587; /* Stanford blue */
     font-size: 15px;
 }
 
 .contact-info .email i {
     font-size: 18px;
-    color: #00508f;
+    color: #005587;
     margin-right: 12px !important;
 }
 
