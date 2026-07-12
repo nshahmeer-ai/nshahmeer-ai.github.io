@@ -454,6 +454,18 @@ ul.unstyled {
     margin-right: 8px;
 }
 
+.mobile-tab-toggle {
+    display: none;
+    padding: 15px 20px;
+    background-color: #f2f2f0;
+    color: #8c734b;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Responsive */
 @media (max-width: 767px) {
     .masthead-content-row {
@@ -530,8 +542,17 @@ ul.unstyled {
         flex-direction: column;
     }
     
+    .mobile-tab-toggle {
+        display: flex;
+    }
+    
     .nav-tabs {
         flex-direction: column;
+        display: none;
+    }
+    
+    .nav-tabs.open {
+        display: flex;
     }
     
     .nav-tabs li a {
@@ -555,6 +576,15 @@ ul.unstyled {
         flex-grow: 1;
         max-width: none;
         box-sizing: border-box;
+    }
+
+    .stanford-logo a {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .site-name-1 {
+        font-size: 15px;
     }
 
     body {

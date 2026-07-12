@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabLinks = document.querySelectorAll('.tab-link');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
+    // Mobile tab toggle
+    const mobileToggle = document.querySelector('.mobile-tab-toggle');
+    const navTabs = document.querySelector('.nav-tabs');
+    const currentMobileTab = document.getElementById('currentMobileTab');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navTabs.classList.toggle('open');
+        });
+    }
+
     tabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -19,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show target pane
             const targetId = link.getAttribute('href').substring(1);
             document.getElementById(targetId).classList.add('active');
+            
+            // Update mobile tab text and close menu
+            if (currentMobileTab) {
+                currentMobileTab.textContent = link.textContent.trim();
+                if (navTabs) {
+                    navTabs.classList.remove('open');
+                }
+            }
         });
     });
 
