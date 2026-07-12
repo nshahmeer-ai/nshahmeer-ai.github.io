@@ -44,14 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Search bar functionality
     const searchInput = document.querySelector('.header-search input');
     if (searchInput) {
-        searchInput.placeholder = "Search portfolio..."; // Update placeholder
+        searchInput.placeholder = "Search..."; // Update placeholder
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             const sections = document.querySelectorAll('.content-section');
+            const tabPanes = document.querySelectorAll('.tab-pane');
             
             // If empty, reset all
             if (!query) {
                 sections.forEach(sec => sec.style.display = '');
+                tabPanes.forEach(pane => {
+                    // Reset inline display styles
+                    pane.style.display = '';
+                });
                 return;
             }
 
@@ -60,14 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const text = sec.textContent.toLowerCase();
                 if (text.includes(query)) {
                     sec.style.display = '';
+                    // Show parent tab pane explicitly during search
+                    const parentPane = sec.closest('.tab-pane');
+                    if (parentPane) parentPane.style.display = 'block';
                 } else {
                     sec.style.display = 'none';
                 }
             });
             
-            // Force show active tab content container even if some sections are hidden
-            const activePane = document.querySelector('.tab-pane.active');
-            if(activePane) activePane.style.display = '';
+            // Hide tab panes that have no visible sections
+            tabPanes.forEach(pane => {
+                const hasVisible = Array.from(pane.querySelectorAll('.content-section')).some(sec => sec.style.display !== 'none');
+                if (!hasVisible) {
+                    pane.style.display = 'none';
+                }
+            });
         });
     }
 });
