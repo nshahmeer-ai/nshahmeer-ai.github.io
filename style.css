@@ -73,6 +73,7 @@ ul.unstyled {
 
 #header .container.navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -109,7 +110,7 @@ ul.unstyled {
     background: var(--white);
     border-radius: 20px;
     padding: 6px 15px;
-    width: 320px;
+    width: 280px;
 }
 
 .header-search input {
@@ -544,13 +545,15 @@ ul.unstyled {
     }
 
     #header .container.navbar {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: nowrap;
     }
 
     .header-search {
-        width: 100%;
-        max-width: 100%;
+        width: auto;
+        flex-grow: 1;
+        max-width: none;
         box-sizing: border-box;
     }
 
