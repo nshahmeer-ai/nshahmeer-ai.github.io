@@ -304,16 +304,17 @@ ul.unstyled {
     top: 1px; /* Cover the bottom border */
 }
 
-.nav-tabs li.active a {
-    color: var(--dark-text);
-    background-color: transparent;
-    border-top: 3px solid var(--stanford-red);
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus {
+    color: var(--dark-text) !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-top: 3px solid var(--stanford-red) !important;
     padding-top: 12px; /* Compensate for the 3px top border */
 }
 
 .tab-content {
-    background-color: transparent;
-    padding: 40px;
+    background-color: var(--white); /* Ensure the entire content area is white */
+    padding: 20px 40px 40px 40px;
     box-shadow: none;
     min-height: 400px;
 }
