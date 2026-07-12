@@ -491,8 +491,28 @@ ul.unstyled {
         border-bottom: 1px solid var(--gray-border);
     }
 
+    #header {
+        height: auto;
+        padding: 10px 0;
+    }
+
     .header .container.navbar {
         flex-direction: column;
         gap: 10px;
     }
-}
+
+    .header-search {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+    .nameAndTitle h1 {
+        font-size: 24px;
+    }
+}  
+ 
