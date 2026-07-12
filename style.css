@@ -512,7 +512,7 @@ ul.unstyled {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 35px;
         margin-bottom: 20px !important;
         gap: 15px;
     }
