@@ -14,7 +14,7 @@
 <body class="profile">
     <div class="wrapper">
         <header id="header">
-            <div class="container navbar">
+            <div class="container navbar" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
                 <div class="column-logo brand">
                     <div class="logo">
                         <div class="stanford-logo">
@@ -31,36 +31,48 @@
                         </div>
                     </div>
                 </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Search by name, email, work phone...">
+                    <i class="icon-search search-icon"></i>
+                </div>
+                <div class="header-links">
+                    <a href="#">BROWSE <i class="icon-caret-down"></i></a>
+                    <a href="#">SIGN IN</a>
+                    <a href="#">EDIT MY PROFILE</a>
+                </div>
             </div>
         </header>
         <main id="bodyContent">
             <div id="mainContent">
                 <section id="mastheadContainer" class="banner profile">
+                    <div class="masthead-overlay"></div>
                     <div class="container">
                         <div class="row-fluid">
-                            <div class="span12">
+                            <div class="span12 masthead-content-row">
                                 <div class="image-holder">
                                     <img src="shahmeer pic.jpg" alt="Shahmeer Nawaz">
                                 </div>
                                 <div class="nameAndTitle">
-                                    <h1>Shahmeer Nawaz</h1>
-                                    <h2>MSc in Artificial Intelligence Graduate, AI Developer, and Graduate Assistant<br/></h2>
+                                    <div class="name-actions-row">
+                                        <h1>Shahmeer Nawaz</h1>
+                                        <ul class="unstyled right-actions">
+                                            <li>
+                                                <a href="javascript:window.print()">
+                                                    <div class="icon-background"><i class="icon-print"></i></div>
+                                                    PRINT PROFILE
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="mailto:shahmeernawazai@gmail.com">
+                                                    <div class="icon-background"><i class="icon-envelope-alt"></i></div>
+                                                    EMAIL PROFILE
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2>MSc in Artificial Intelligence Graduate, AI Developer, and Graduate Assistant</h2>
                                     <h3>Artificial Intelligence</h3>
                                 </div>
-                                <ul class="unstyled right-actions">
-                                    <li>
-                                        <a href="javascript:window.print()">
-                                            <div class="icon-background"><i class="icon-print"></i></div>
-                                            Print Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:shahmeernawazai@gmail.com">
-                                            <div class="icon-background"><i class="icon-envelope-alt"></i></div>
-                                            Email Profile
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

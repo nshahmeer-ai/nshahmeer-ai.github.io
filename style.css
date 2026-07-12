@@ -96,16 +96,68 @@ ul.unstyled {
     text-decoration: none;
 }
 
+.header-search {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 6px 15px;
+    width: 320px;
+}
+
+.header-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333;
+}
+
+.header-search i {
+    color: #666;
+}
+
+.header-links a {
+    color: var(--white);
+    margin-left: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header-links a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
 /* Masthead */
 .banner.profile {
-    background-color: var(--gray-bg);
-    padding: 40px 0;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
     border-bottom: 1px solid var(--gray-border);
 }
 
-.banner.profile .row-fluid .span12 {
-    display: flex;
+.masthead-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(100, 80, 50, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.banner.profile .container {
     position: relative;
+    z-index: 2;
+}
+
+.masthead-content-row {
+    display: flex;
+    align-items: flex-start;
 }
 
 .image-holder {
@@ -117,73 +169,87 @@ ul.unstyled {
 .image-holder img {
     width: 200px;
     height: 200px;
-    border: 3px solid var(--white);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .nameAndTitle {
     flex-grow: 1;
+    color: var(--white);
+}
+
+.name-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .nameAndTitle h1 {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: 600;
-    margin: 0 0 10px 0;
-    color: #2e2d29;
+    margin: 0;
+    color: var(--white);
     letter-spacing: -0.5px;
 }
 
 .nameAndTitle h2 {
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0 0 5px 0;
-    line-height: 1.4;
-    color: #2e2d29;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .nameAndTitle h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--stanford-red);
-    margin: 10px 0 0 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #e2e2e2;
+    margin: 0;
 }
 
-/* Actions */
+/* Actions in Masthead */
 .right-actions {
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .right-actions li {
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .right-actions a {
     display: flex;
     align-items: center;
-    color: var(--link-color);
-    font-size: 14px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .right-actions .icon-background {
-    background-color: var(--white);
-    border: 1px solid var(--gray-border);
-    width: 28px;
-    height: 28px;
+    background-color: rgba(255,255,255,0.25);
+    border: none;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
-    color: var(--stanford-red);
+    margin-right: 6px;
+    color: var(--white);
     transition: all 0.2s;
 }
 
 .right-actions a:hover .icon-background {
-    background-color: var(--stanford-red);
-    color: var(--white);
+    background-color: rgba(255,255,255,0.4);
+}
+
+.right-actions a:hover {
+    text-decoration: none;
 }
 
 /* Tabs Layout */
@@ -350,10 +416,15 @@ ul.unstyled {
 
 /* Responsive */
 @media (max-width: 767px) {
-    .banner.profile .row-fluid .span12 {
+    .masthead-content-row {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    
+    .name-actions-row {
+        flex-direction: column;
+        justify-content: center;
     }
     
     .image-holder {
@@ -362,14 +433,9 @@ ul.unstyled {
     }
     
     .right-actions {
-        position: static;
-        margin-top: 20px;
-        text-align: center;
-    }
-    
-    .right-actions li {
-        display: inline-block;
-        margin: 0 10px;
+        margin-top: 15px;
+        margin-bottom: 20px !important;
+        justify-content: center;
     }
     
     .span8, .span4 {
@@ -384,5 +450,10 @@ ul.unstyled {
     .nav-tabs li a {
         border-radius: 0;
         border-bottom: 1px solid var(--gray-border);
+    }
+
+    .header .container.navbar {
+        flex-direction: column;
+        gap: 10px;
     }
 }
