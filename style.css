@@ -341,10 +341,22 @@ ul.unstyled {
 }
 
 .content-section h3 {
-    font-size: 26px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 400;
     color: var(--stanford-red);
-    margin: 0 0 10px 0;
+    margin: 0 0 25px 0;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.content-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 4px;
+    background-color: var(--stanford-red);
 }
 
 .content-section hr {
@@ -352,8 +364,10 @@ ul.unstyled {
 }
 
 .content-section p {
-    margin-bottom: 15px;
-    color: var(--gray-text);
+    margin-bottom: 25px;
+    color: #4d4d4f;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Lists */
