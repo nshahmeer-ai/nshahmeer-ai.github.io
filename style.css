@@ -387,7 +387,12 @@ ul.unstyled {
 }
 
 .description {
-    color: #4d4d4f;
+    color: #767676; /* Lighter gray for secondary text */
+}
+
+.description strong {
+    color: #4d4d4f; /* Darker gray for titles */
+    font-weight: normal; /* Match Stanford's non-bold, dark titles */
 }
 
 .description.bulleted {
@@ -395,26 +400,40 @@ ul.unstyled {
 }
 
 .description.bulleted::before {
-    content: "\2022";
-    color: var(--stanford-red);
-    font-weight: bold;
+    content: "";
     display: inline-block;
-    width: 1em;
+    width: 6px;
+    height: 6px;
+    background-color: #d1d1d1;
+    margin-right: 12px;
     margin-left: -1em;
+    vertical-align: middle;
+    margin-top: -2px;
 }
 
 /* .section-list-item padding-left was causing misalignment for non-bulleted items */
 
 .bulleted-sublist {
-    list-style-type: disc;
+    list-style-type: none;
     margin-top: 5px;
     margin-left: 0;
     padding-left: 20px;
-    color: #4d4d4f;
+    color: #767676; /* Lighter gray for secondary bullet text */
 }
 
 .bulleted-sublist li {
     margin-bottom: 5px;
+    position: relative;
+}
+
+.bulleted-sublist li::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 8px; /* vertically center with text */
+    width: 6px;
+    height: 6px;
+    background-color: #d1d1d1;
 }
 
 /* Sidebar */
