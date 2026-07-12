@@ -1,4 +1,4 @@
-﻿/* Exact Stanford Profile Theme Replication */
+/* Exact Stanford Profile Theme Replication */
 :root {
     --stanford-red: #8C1515;
     --stanford-dark-red: #820000;
@@ -68,6 +68,13 @@ ul.unstyled {
     background-color: var(--stanford-red);
     height: 60px;
     display: flex;
+    align-items: center;
+}
+
+#header .container.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
 }
 
