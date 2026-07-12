@@ -151,9 +151,7 @@ ul.unstyled {
 .masthead-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(100, 80, 50, 0.8);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -503,11 +501,12 @@ ul.unstyled {
     .right-actions {
         grid-area: actions;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         margin-top: 15px;
         margin-bottom: 20px !important;
-        gap: 10px;
+        gap: 15px;
     }
     
     .span8, .span4 {
