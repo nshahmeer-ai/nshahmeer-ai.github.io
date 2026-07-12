@@ -503,7 +503,7 @@ ul.unstyled {
         padding: 10px 0;
     }
 
-    .header .container.navbar {
+    #header .container.navbar {
         flex-direction: column;
         gap: 10px;
     }
