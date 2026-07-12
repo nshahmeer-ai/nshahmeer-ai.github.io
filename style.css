@@ -456,25 +456,34 @@ ul.unstyled {
 /* Responsive */
 @media (max-width: 767px) {
     .masthead-content-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .name-actions-row {
-        flex-direction: column;
-        justify-content: center;
+        display: block;
+        text-align: left;
     }
     
     .image-holder {
-        margin-right: 0;
-        margin-bottom: 20px;
+        float: left;
+        width: 120px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .image-holder img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .name-actions-row {
+        display: block;
     }
     
     .right-actions {
-        margin-top: 15px;
+        clear: both;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 25px;
         margin-bottom: 20px !important;
-        justify-content: center;
+        gap: 10px;
     }
     
     .span8, .span4 {
